@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>TodoList</title>
+  </head>
+  <body>
+    <!-- The container for the actual to do section -->
+    <div class="container">
+      <header>
+        <h1>What's on the agenda?</h1>
+        <!-- Where you type your tasks -->
+        <form action="" id="task-form">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="What is on your agenda for today?"
+          />
+          <input type="submit" id="task-submit" value="Add" />
+        </form>
+      </header>.
+      <main>
+        <!-- The tasks that you have created accumulate here -->
+        <section class="task-list">
+          <div id="tasks"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="myscript.js"></script>
+  </body>
+</html>

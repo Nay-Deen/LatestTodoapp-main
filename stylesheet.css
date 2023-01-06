@@ -1,0 +1,164 @@
+:root {
+  --lightgreen: #8ceb98;
+  --orange: #f8a035;
+  --background: #356b40;
+  --maintext: #e0df89;
+}
+
+
+/* apply styles to all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+/* The background of the whole page */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* background: #60f190; */
+  background-image: url("https://github.com/Nay-Deen/LatestTodoapp/blob/main/images/Background.jpg?raw=true");
+}
+
+/* The whats on the agenda section */
+header {
+  padding: 2rem 1rem;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+/*  style the h1 within the header */
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--maintext);
+  margin-bottom: 1.5rem;
+}
+/* where you add your tasks */
+#task-form {
+  display: flex;
+}
+
+/* styles the input button */
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+/* style the task input */
+#task-input {
+  flex: 1 1 0%;
+  background-color: var(--background);
+  padding: 1rem;
+  border: 1px solid var(--maintext);
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: var(--maintext);
+  font-size: 1.25rem;
+}
+
+/* styles the placeholder */
+#task-input::placeholder {
+  color: var(--maintext);
+}
+
+/* syles the submit task element */
+#task-submit {
+  color: var(--maintext);
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s;
+  border: 1px solid var(--maintext);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+/* styles the submit task element when it is hovered over */
+#task-submit:hover {
+  opacity: 0.8;
+}
+
+#task-submit:active {
+  opacity: 0.6;
+}
+
+/* The block/container where tasks are added */
+.container {
+  background: var(--background);
+  flex: 0% 1 0%;
+  max-width: 750px;
+  width: 100%;
+  margin: 2rem auto;
+  border-radius: 1rem;
+}
+main {
+  flex: 1 1 0%;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.task-list {
+  padding: 1rem;
+}
+
+#tasks .task {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background);
+  border: 1px solid var(--orange);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+#tasks .task .content {
+  flex: 1 1 0%;
+}
+#tasks .task .content .text {
+  color: var(--maintext);
+  font-size: 1.13rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+#tasks .task .content .text:not(:read-only) {
+  color: var(--lightgreen);
+}
+#tasks .task .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.task .actions button {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0 0.5rem;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+.task .actions button:hover {
+  opacity: 0.8;
+}
+
+.task .actions button:active {
+  opacity: 0.6;
+}
+.task .actions .Edit {
+  color: var(--lightgreen);
+}
+.task .actions .Delete {
+  color: rgb(202, 6, 46);
+}
+.task .actions .Completed {
+  color: var(--orange);
+}
+
+.strike {
+  text-decoration: line-through;
+}
