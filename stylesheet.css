@@ -162,3 +162,10 @@ main {
 .strike {
   text-decoration: line-through;
 }
+
+.feedback {
+  color: var(--maintext);
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
